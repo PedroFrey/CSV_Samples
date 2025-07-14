@@ -1,0 +1,33 @@
+id_subetapa,etapa,subetapa,responsável
+100,Mobilização,Limpeza do terreno,Eduardo Reis
+101,Mobilização,Tapume,João Rocher
+102,Mobilização,Barracão de obra,Anastasia Laffer
+103,Fundação,Sondagem,Carlos Silva
+104,Fundação,Escavação,Anastasia Laffer
+105,Fundação,Blocos de fundação,Anastasia Laffer
+106,Fundação,Vigas baldrame,Marina Lopez
+107,Estrutura,Pilares,Carlos Silva
+108,Estrutura,Vigas,Marina Lopez
+109,Estrutura,Lajes,Marina Lopez
+110,Alvenaria,Alvenaria externa,Anastasia Laffer
+111,Alvenaria,Alvenaria interna,Anastasia Laffer
+112,Alvenaria,Vergas e contravergas,João Rocher
+113,Instalações Elétricas,Eletrodutos,Marina Lopez
+114,Instalações Elétricas,Fiação,Eduardo Reis
+115,Instalações Elétricas,Tomadas,Carlos Silva
+116,Instalações Hidrossanitárias,Tubulações de água,Anastasia Laffer
+117,Instalações Hidrossanitárias,Esgoto,Marina Lopez
+118,Instalações Hidrossanitárias,Louças,Eduardo Reis
+119,Revestimentos,Chapisco,Anastasia Laffer
+120,Revestimentos,Emboço,Carlos Silva
+121,Revestimentos,Cerâmica piso,Eduardo Reis
+122,Revestimentos,Cerâmica parede,João Rocher
+123,Pintura,Massa corrida,Marina Lopez
+124,Pintura,Pintura interna,João Rocher
+125,Pintura,Pintura externa,Marina Lopez
+126,Cobertura,Estrutura metálica,João Rocher
+127,Cobertura,Telhas,Carlos Silva
+128,Cobertura,Rufos,João Rocher
+129,Finalização,Esquadrias,Marina Lopez
+130,Finalização,Limpeza fina,Marina Lopez
+131,Finalização,Entrega da obra,Marina Lopez

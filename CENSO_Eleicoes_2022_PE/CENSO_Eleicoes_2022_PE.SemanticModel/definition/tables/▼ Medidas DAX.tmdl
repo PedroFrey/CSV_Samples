@@ -173,6 +173,7 @@ table '▼ Medidas DAX'
 
 	measure 'Candidatos sem voto' = ```
 			
+			-- Medida sem utilização
 			COUNTROWS(EXCEPT(
 			
 			    SELECTCOLUMNS(perfil_cand_2022_PE,perfil_cand_2022_PE[NR_CANDIDATO])

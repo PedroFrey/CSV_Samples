@@ -1,0 +1,112 @@
+table votacao_secao_2022_PE
+	lineageTag: 20365395-a5df-40b9-ae90-c46923de03ea
+
+	column NR_ZONA
+		dataType: int64
+		formatString: 0
+		lineageTag: eb8288b0-819c-471d-9921-71e7095ae10d
+		summarizeBy: sum
+		sourceColumn: NR_ZONA
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_SECAO
+		dataType: int64
+		formatString: 0
+		lineageTag: 937c9dc6-e438-4271-9733-9f0b91dd0702
+		summarizeBy: sum
+		sourceColumn: NR_SECAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column DS_CARGO
+		dataType: string
+		lineageTag: ca910062-3c9c-4bc0-b209-636c3ee655e6
+		summarizeBy: none
+		sourceColumn: DS_CARGO
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_VOTAVEL
+		dataType: int64
+		formatString: 0
+		lineageTag: d36181fe-1bf3-4eba-ad5b-5b121c7c797c
+		summarizeBy: sum
+		sourceColumn: NR_VOTAVEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column NM_VOTAVEL
+		dataType: string
+		lineageTag: d9f521f6-3239-46fa-a6b7-d4fe25d358e9
+		summarizeBy: none
+		sourceColumn: NM_VOTAVEL
+
+		annotation SummarizationSetBy = Automatic
+
+	column QT_VOTOS
+		dataType: int64
+		formatString: 0
+		lineageTag: 4e14d4c6-2d2e-42cf-8a41-dec1e5829fbf
+		summarizeBy: sum
+		sourceColumn: QT_VOTOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column loc_key
+		dataType: string
+		lineageTag: 16cc9739-a069-41e9-8a61-fd7f5aa94fe3
+		summarizeBy: none
+		sourceColumn: loc_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_TURNO
+		dataType: string
+		lineageTag: 1c182614-307d-4990-b1e0-22454c08ee5f
+		summarizeBy: none
+		sourceColumn: NR_TURNO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CD_TIPO_ELEICAO
+		dataType: string
+		lineageTag: d8836c3a-2fe7-4069-addc-0bc0fa68ce80
+		summarizeBy: none
+		sourceColumn: CD_TIPO_ELEICAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column CAND_KEY
+		dataType: string
+		lineageTag: 3587d757-3122-4160-b3cb-713c2ac1e724
+		summarizeBy: none
+		sourceColumn: CAND_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	partition votacao_secao_2022_PE = m
+		mode: import
+		source = ```
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Pedro\Desktop\votacao_secao_2022_PE.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"DS_CARGO", type text}, {"NR_VOTAVEL", Int64.Type}, {"NM_VOTAVEL", type text}, {"QT_VOTOS", Int64.Type}, {"loc_key", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{""}),
+				    Custom1 = Table.AddColumn(
+				    #"Removed Columns",
+				    "CAND_KEY",
+				    each 
+				        Text.From([DS_CARGO]) & 
+				        "-" & 
+				        Text.From([NR_VOTAVEL]),
+				    type text
+				)
+				in
+				    Custom1
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

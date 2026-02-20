@@ -1,0 +1,24 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["▼ Medidas DAX","presenca_secao_2022_PE","perfil_eleitor_secao_2022_PE","votacao_secao_2022_PE","perfil_cand_2022_PE"]
+
+annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
+
+ref table votacao_secao_2022_PE
+ref table presenca_secao_2022_PE
+ref table '▼ Medidas DAX'
+ref table perfil_eleitor_secao_2022_PE
+ref table perfil_cand_2022_PE
+ref table DateTableTemplate_9d296e95-cab1-453e-a61f-586cd213ae9f
+ref table LocalDateTable_ed1afeae-2361-4e43-b1b8-d3708d7df811
+
+ref cultureInfo en-US
+

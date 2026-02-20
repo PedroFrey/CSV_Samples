@@ -1,0 +1,88 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 368,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 735,
+            "y": 0
+          },
+          "nodeIndex": "votacao_secao_2022_PE",
+          "nodeLineageTag": "20365395-a5df-40b9-ae90-c46923de03ea",
+          "size": {
+            "height": 272,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 0
+          },
+          "nodeIndex": "▼ Medidas DAX",
+          "nodeLineageTag": "5cd2100d-026b-43d7-acbb-93fcb21ae1a9",
+          "size": {
+            "height": 226,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 416,
+            "y": 101
+          },
+          "nodeIndex": "presenca_secao_2022_PE",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 272
+        },
+        {
+          "location": {
+            "x": 658,
+            "y": 290
+          },
+          "nodeIndex": "perfil_eleitor_secao_2022_PE",
+          "nodeLineageTag": "f0b7d84e-f682-4925-a70e-7315ef20a2ca",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 993,
+            "y": 81.5
+          },
+          "nodeIndex": "perfil_cand_2022_PE",
+          "nodeLineageTag": "a6f19ea1-8c11-4fe0-823b-aff867d40d29",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

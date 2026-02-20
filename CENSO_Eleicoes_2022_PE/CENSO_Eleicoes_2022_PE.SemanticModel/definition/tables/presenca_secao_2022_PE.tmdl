@@ -1,0 +1,81 @@
+table presenca_secao_2022_PE
+	lineageTag: 5db30a0e-4c05-4b58-8f68-b42046f2882f
+
+	column NM_MUNICIPIO
+		dataType: string
+		lineageTag: ebe97252-edba-4437-ac6d-a7b3c51e4e15
+		dataCategory: City
+		summarizeBy: none
+		sourceColumn: NM_MUNICIPIO
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_ZONA
+		dataType: int64
+		formatString: 0
+		lineageTag: f64c011a-6725-4621-9e78-1ba098f4201c
+		summarizeBy: sum
+		sourceColumn: NR_ZONA
+
+		annotation SummarizationSetBy = Automatic
+
+	column NR_SECAO
+		dataType: int64
+		formatString: 0
+		lineageTag: be0f4e65-2cac-4af0-beb2-4180be1f16dc
+		summarizeBy: sum
+		sourceColumn: NR_SECAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column QT_APTOS
+		dataType: int64
+		formatString: 0
+		lineageTag: e284939d-9c34-423f-bb16-bb1047638022
+		summarizeBy: sum
+		sourceColumn: QT_APTOS
+
+		annotation SummarizationSetBy = Automatic
+
+	column QT_COMPARECIMENTO
+		dataType: int64
+		formatString: 0
+		lineageTag: 61e18ecd-bd7e-47c9-9e8a-0b43d181a8ed
+		summarizeBy: sum
+		sourceColumn: QT_COMPARECIMENTO
+
+		annotation SummarizationSetBy = Automatic
+
+	column loc_key
+		dataType: string
+		lineageTag: 4f3ff98c-98cd-41c0-a86c-5ab16b2b2fb7
+		summarizeBy: none
+		sourceColumn: loc_key
+
+		annotation SummarizationSetBy = Automatic
+
+	column UF
+		dataType: string
+		lineageTag: cf95255b-e3b7-4c6b-965e-46c5d658e6e4
+		dataCategory: StateOrProvince
+		summarizeBy: none
+		sourceColumn: UF
+
+		annotation SummarizationSetBy = Automatic
+
+	partition presenca_secao_2022_PE = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("C:\Users\Pedro\Desktop\presenca_votacao_secao_2022_PE.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"QT_APTOS", Int64.Type}, {"QT_COMPARECIMENTO", Int64.Type}, {"loc_key", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"", "PERC_COMPARECIMENTO", "NR_TURNO", "CD_TIPO_ELEICAO", "DS_ELEICAO"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "UF", each "Pernambuco")
+				in
+				    #"Added Custom"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

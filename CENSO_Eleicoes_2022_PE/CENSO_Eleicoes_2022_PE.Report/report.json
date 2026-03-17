@@ -1,5 +1,5 @@
 {
-  "config": "{\"version\":\"5.69\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "config": "{\"version\":\"5.71\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
   "layoutOptimization": 0,
   "resourcePackages": [
     {
@@ -158,7 +158,7 @@
           "z": 4000.00
         },
         {
-          "config": "{\"name\":\"f33192b04b8b1bd6a295\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.3961352657005,\"y\":272.07729468599035,\"z\":8000,\"width\":354.00966183574883,\"height\":75.74879227053141,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\" ▶ Verde = Votação acima de 5 % na cidade\"}]},{\"textRuns\":[{\"value\":\" ▶ Vermelho = Votação abaixo de 0.5 % na cidade\"}]},{\"textRuns\":[{\"value\":\" ▶ Azul = Votação entre 5% e 0,5% na cidade\"}]}]}}]}}}",
+          "config": "{\"name\":\"f33192b04b8b1bd6a295\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.3961352657005,\"y\":272.07729468599035,\"z\":8000,\"width\":354.00966183574883,\"height\":75.74879227053141,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\" ▶\",\"textStyle\":{\"color\":\"#059622\"}},{\"value\":\" Verde = Votação acima de 5 % na cidade\"}]},{\"textRuns\":[{\"value\":\" \",\"textStyle\":{\"color\":\"#12239e\"}},{\"value\":\"▶\",\"textStyle\":{\"color\":\"#e62609\"}},{\"value\":\" Vermelho = Votação abaixo de 0.5 % na cidade\"}]},{\"textRuns\":[{\"value\":\" \"},{\"value\":\"▶\",\"textStyle\":{\"color\":\"#414fb1\"}},{\"value\":\" Azul = Votação entre 5% e 0,5% na cidade\"}]}]}}]}}}",
           "filters": "[]",
           "height": 75.75,
           "width": 354.01,
@@ -176,7 +176,7 @@
           "z": 1000.00
         },
         {
-          "config": "{\"name\":\"fb6443a59b3e74883448\",\"layouts\":[{\"id\":0,\"position\":{\"x\":453.54330708661416,\"y\":60.94488188976378,\"z\":5000,\"width\":341.5748031496063,\"height\":89.29133858267716,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"votacao_secao_2022_PE.NM_VOTAVEL\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"},\"Name\":\"votacao_secao_2022_PE.NM_VOTAVEL\",\"NativeReferenceName\":\"Candidatos\"}]},\"columnProperties\":{\"votacao_secao_2022_PE.NM_VOTAVEL\":{\"displayName\":\"Candidatos\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"}},\"Right\":{\"Literal\":{\"Value\":\"'andré'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'ANDRÉ FERREIRA RODRIGUES'\"}}]]}}}]}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "config": "{\"name\":\"fb6443a59b3e74883448\",\"layouts\":[{\"id\":0,\"position\":{\"x\":453.54330708661416,\"y\":60.94488188976378,\"z\":5000,\"width\":341.5748031496063,\"height\":89.29133858267716,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"votacao_secao_2022_PE.NM_VOTAVEL\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"},\"Name\":\"votacao_secao_2022_PE.NM_VOTAVEL\",\"NativeReferenceName\":\"Candidatos\"}]},\"columnProperties\":{\"votacao_secao_2022_PE.NM_VOTAVEL\":{\"displayName\":\"Candidatos\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"}},\"Right\":{\"Literal\":{\"Value\":\"'ferreira'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
           "filters": "[]",
           "height": 89.29,
           "width": 341.57,
@@ -188,14 +188,24 @@
       "width": 1280.00
     },
     {
-      "config": "{\"visibility\":1}",
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}}}}]},\"visibility\":1}",
       "displayName": "Dev Page",
       "displayOption": 1,
       "filters": "[]",
       "height": 720.00,
       "name": "d9b018be899ecff344fa",
       "ordinal": 2,
-      "visualContainers": [],
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"46d59d736800a6a29703\",\"layouts\":[{\"id\":0,\"position\":{\"x\":477.6377952755905,\"y\":114.8031496062992,\"z\":0,\"width\":299.0551181102362,\"height\":300.4724409448819}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"▼ Medidas DAX.Qtd votos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd votos\"},\"Name\":\"▼ Medidas DAX.Qtd votos\",\"NativeReferenceName\":\"Qtd votos\"}]},\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 300.47,
+          "width": 299.06,
+          "x": 477.64,
+          "y": 114.80,
+          "z": 0.00
+        }
+      ],
       "width": 1280.00
     },
     {

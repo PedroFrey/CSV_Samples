@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 368,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -16,10 +16,11 @@
           "nodeIndex": "votacao_secao_2022_PE",
           "nodeLineageTag": "20365395-a5df-40b9-ae90-c46923de03ea",
           "size": {
-            "height": 272,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 272
         },
         {
           "location": {
@@ -63,20 +64,35 @@
         },
         {
           "location": {
-            "x": 993,
-            "y": 81.5
+            "x": 1021.75,
+            "y": 150.25
           },
           "nodeIndex": "perfil_cand_2022_PE",
           "nodeLineageTag": "a6f19ea1-8c11-4fe0-823b-aff867d40d29",
           "size": {
-            "height": 300,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 259.25,
+            "y": 384.25
+          },
+          "nodeIndex": "rede_social_candidato_2022_PE",
+          "nodeLineageTag": "f6bcb7e3-0e83-4235-b3e1-a87544e4349b",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 80,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

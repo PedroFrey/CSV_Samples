@@ -69,9 +69,10 @@ table perfil_eleitor_secao_2022_PE
 		annotation SummarizationSetBy = Automatic
 
 	column ANO_ELEICAO
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: e621ec37-1365-40e4-898f-f5029969b039
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ANO_ELEICAO
 
 		annotation SummarizationSetBy = Automatic
@@ -100,16 +101,23 @@ table perfil_eleitor_secao_2022_PE
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Unnamed: 0'
+		dataType: int64
+		formatString: 0
+		lineageTag: 28bf5b92-13d0-49cd-91de-27ff1b07c60f
+		summarizeBy: sum
+		sourceColumn: Unnamed: 0
+
+		annotation SummarizationSetBy = Automatic
+
 	partition perfil_eleitor_secao_2022_PE = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Pedro\Desktop\perfil_eleitor_secao_2022_PE.csv"),[Delimiter=",", Columns=20, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"DS_GENERO", type text}, {"DS_ESTADO_CIVIL", type text}, {"DS_FAIXA_ETARIA", type text}, {"DS_GRAU_ESCOLARIDADE", type text}, {"QT_ELEITORES_PERFIL", Int64.Type}, {"LOC_KEY", type text}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"", "_1", "_2", "_3", "_4", "_5", "_6", "_7"})
+				    Source = Parquet.Document(File.Contents("C:\Users\Pedro\Desktop\CSV_Samples\CENSO_Eleicoes_2022_PE\Parquets\perfil_eleitor_secao_2022_PE.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Unnamed: 0", Int64.Type}, {"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"DS_GENERO", type text}, {"DS_ESTADO_CIVIL", type text}, {"DS_FAIXA_ETARIA", type text}, {"DS_GRAU_ESCOLARIDADE", type text}, {"QT_ELEITORES_PERFIL", Int64.Type}, {"LOC_KEY", type text}})
 				in
-				    #"Removed Columns"
+				    #"Changed Type"
 
 	annotation PBI_NavigationStepName = Navigation
 

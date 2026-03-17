@@ -67,10 +67,9 @@ table presenca_secao_2022_PE
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("C:\Users\Pedro\Desktop\presenca_votacao_secao_2022_PE.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"QT_APTOS", Int64.Type}, {"QT_COMPARECIMENTO", Int64.Type}, {"loc_key", type text}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"", "PERC_COMPARECIMENTO", "NR_TURNO", "CD_TIPO_ELEICAO", "DS_ELEICAO"}),
+				    Source = Parquet.Document(File.Contents("C:\Users\Pedro\Desktop\CSV_Samples\CENSO_Eleicoes_2022_PE\Parquets\presenca_votacao_secao_2022_PE.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"QT_APTOS", Int64.Type}, {"QT_COMPARECIMENTO", Int64.Type}, {"loc_key", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Unnamed: 0", "PERC_COMPARECIMENTO", "NR_TURNO", "CD_TIPO_ELEICAO", "DS_ELEICAO"}),
 				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "UF", each "Pernambuco")
 				in
 				    #"Added Custom"

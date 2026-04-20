@@ -1,11 +1,3 @@
-relationship 51d90b02-447a-ceba-c7ec-04fc0a731554
-	fromColumn: votacao_secao_2022_PE.loc_key
-	toColumn: presenca_secao_2022_PE.loc_key
-
-relationship AutoDetected_99d0263d-300c-48c1-851c-bb4e9a1b6672
-	fromColumn: perfil_eleitor_secao_2022_PE.LOC_KEY
-	toColumn: presenca_secao_2022_PE.loc_key
-
 relationship 76a582c9-97d6-4e6d-ac09-8be4162ef6f1
 	joinOnDateBehavior: datePartOnly
 	fromColumn: perfil_cand_2022_PE.DT_NASCIMENTO
@@ -16,4 +8,26 @@ relationship 75138a8e-3089-9a5f-55ed-1e872551b5d0
 	toCardinality: many
 	fromColumn: perfil_cand_2022_PE.CAND_KEY
 	toColumn: votacao_secao_2022_PE.CAND_KEY
+
+relationship AutoDetected_7f387bac-8e60-46f6-b3d0-25bf1f5741d1
+	fromColumn: votacao_secao_2022_PE.LOC_KEY
+	toColumn: presenca_secao_2022_PE.LOC_KEY
+
+relationship AutoDetected_563612b6-b466-438d-b8bf-1b961b99da24
+	fromColumn: perfil_eleitor_secao_2022_PE.LOC_KEY
+	toColumn: presenca_secao_2022_PE.LOC_KEY
+
+relationship AutoDetected_6e698069-2bc2-4147-a6a3-eb1703db63d6
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: presenca_secao_2022_PE.LOC_KEY
+	toColumn: proporcao_eleitor_secao_2022_PE.LOC_KEY
+
+relationship db7d59ae-1e33-2ea2-4088-182525e68688
+	fromColumn: desempenho_eleitor_secao_2022_PE.LOC_KEY
+	toColumn: presenca_secao_2022_PE.LOC_KEY
+
+relationship c8260aba-9275-03e1-f06e-8cd770a66f23
+	fromColumn: resultados_secao_2022_PE.LOC_KEY
+	toColumn: presenca_secao_2022_PE.LOC_KEY
 

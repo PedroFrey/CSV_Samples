@@ -46,14 +46,6 @@ table presenca_secao_2022_PE
 
 		annotation SummarizationSetBy = Automatic
 
-	column loc_key
-		dataType: string
-		lineageTag: 4f3ff98c-98cd-41c0-a86c-5ab16b2b2fb7
-		summarizeBy: none
-		sourceColumn: loc_key
-
-		annotation SummarizationSetBy = Automatic
-
 	column UF
 		dataType: string
 		lineageTag: cf95255b-e3b7-4c6b-965e-46c5d658e6e4
@@ -63,13 +55,38 @@ table presenca_secao_2022_PE
 
 		annotation SummarizationSetBy = Automatic
 
+	column SG_UF
+		dataType: string
+		lineageTag: f70e16ed-5ec2-4424-a9a4-e6f4b6cd520a
+		summarizeBy: none
+		sourceColumn: SG_UF
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOC_KEY
+		dataType: string
+		lineageTag: d9835ca7-6076-48bf-8e64-a8f8793a8527
+		summarizeBy: none
+		sourceColumn: LOC_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column __index_level_0__
+		dataType: int64
+		formatString: 0
+		lineageTag: 1af7400a-6fea-46e0-be77-44e3efcee595
+		summarizeBy: sum
+		sourceColumn: __index_level_0__
+
+		annotation SummarizationSetBy = Automatic
+
 	partition presenca_secao_2022_PE = m
 		mode: import
 		source =
 				let
 				    Source = Parquet.Document(File.Contents("C:\Users\Pedro\Desktop\CSV_Samples\CENSO_Eleicoes_2022_PE\Parquets\presenca_votacao_secao_2022_PE.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
-				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"QT_APTOS", Int64.Type}, {"QT_COMPARECIMENTO", Int64.Type}, {"loc_key", type text}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Unnamed: 0", "PERC_COMPARECIMENTO", "NR_TURNO", "CD_TIPO_ELEICAO", "DS_ELEICAO"}),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"NM_MUNICIPIO", type text}, {"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"QT_APTOS", Int64.Type}, {"QT_COMPARECIMENTO", Int64.Type}, {"LOC_KEY", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"PERC_COMPARECIMENTO", "NR_TURNO", "CD_TIPO_ELEICAO", "DS_ELEICAO"}),
 				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "UF", each "Pernambuco")
 				in
 				    #"Added Custom"

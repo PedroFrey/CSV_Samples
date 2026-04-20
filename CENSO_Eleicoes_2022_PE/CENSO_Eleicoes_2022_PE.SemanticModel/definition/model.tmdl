@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["▼ Medidas DAX","presenca_secao_2022_PE","perfil_eleitor_secao_2022_PE","votacao_secao_2022_PE","perfil_cand_2022_PE","rede_social_candidato_2022_PE"]
+annotation PBI_QueryOrder = ["▼ Medidas DAX","presenca_secao_2022_PE","perfil_eleitor_secao_2022_PE","votacao_secao_2022_PE","perfil_cand_2022_PE","rede_social_candidato_2022_PE","proporcao_eleitor_secao_2022_PE","desempenho_eleitor_secao_2022_PE","resultados_secao_2022_PE"]
 
 annotation PBI_ProTooling = ["DaxQueryView_Desktop","DevMode"]
 
@@ -20,6 +20,9 @@ ref table perfil_cand_2022_PE
 ref table DateTableTemplate_9d296e95-cab1-453e-a61f-586cd213ae9f
 ref table LocalDateTable_ed1afeae-2361-4e43-b1b8-d3708d7df811
 ref table rede_social_candidato_2022_PE
+ref table proporcao_eleitor_secao_2022_PE
+ref table desempenho_eleitor_secao_2022_PE
+ref table resultados_secao_2022_PE
 
 ref cultureInfo en-US
 

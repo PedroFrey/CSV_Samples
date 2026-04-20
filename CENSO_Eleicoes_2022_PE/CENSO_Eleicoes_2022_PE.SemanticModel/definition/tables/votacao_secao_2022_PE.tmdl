@@ -53,14 +53,6 @@ table votacao_secao_2022_PE
 
 		annotation SummarizationSetBy = Automatic
 
-	column loc_key
-		dataType: string
-		lineageTag: 16cc9739-a069-41e9-8a61-fd7f5aa94fe3
-		summarizeBy: none
-		sourceColumn: loc_key
-
-		annotation SummarizationSetBy = Automatic
-
 	column NR_TURNO
 		dataType: int64
 		formatString: 0
@@ -71,7 +63,7 @@ table votacao_secao_2022_PE
 		annotation SummarizationSetBy = Automatic
 
 	column CD_TIPO_ELEICAO
-		dataType: double
+		dataType: int64
 		lineageTag: d8836c3a-2fe7-4069-addc-0bc0fa68ce80
 		summarizeBy: sum
 		sourceColumn: CD_TIPO_ELEICAO
@@ -88,28 +80,77 @@ table votacao_secao_2022_PE
 
 		annotation SummarizationSetBy = Automatic
 
+	column CD_CARGO
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c7e9686-a88f-4f38-8fdb-210025fa42b8
+		summarizeBy: sum
+		sourceColumn: CD_CARGO
+
+		annotation SummarizationSetBy = Automatic
+
+	column LOC_KEY
+		dataType: string
+		lineageTag: d8136937-ab82-4564-887b-9fbdb74cfd61
+		summarizeBy: none
+		sourceColumn: LOC_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column COLOC_KEY
+		dataType: string
+		lineageTag: 5bc528a7-82c5-44ea-9217-1dc3618bb70c
+		summarizeBy: none
+		sourceColumn: COLOC_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column COLOCACAO
+		dataType: int64
+		formatString: 0
+		lineageTag: 9faebd1b-2be1-4fab-acfb-15c142c16aac
+		summarizeBy: sum
+		sourceColumn: COLOCACAO
+
+		annotation SummarizationSetBy = Automatic
+
+	column PARTIDO
+		dataType: string
+		lineageTag: 7c7cfd1a-70db-4959-bf8a-50c74c4af139
+		summarizeBy: none
+		sourceColumn: PARTIDO
+
+		annotation SummarizationSetBy = Automatic
+
+	column __index_level_0__
+		dataType: int64
+		formatString: 0
+		lineageTag: 1739885d-3e0f-4f96-8096-5720324e86a7
+		summarizeBy: sum
+		sourceColumn: __index_level_0__
+
+		annotation SummarizationSetBy = Automatic
+
 	partition votacao_secao_2022_PE = m
 		mode: import
 		source = ```
 				let
 				    Source = Parquet.Document(File.Contents("C:\Users\Pedro\Desktop\CSV_Samples\CENSO_Eleicoes_2022_PE\Parquets\votacao_secao_2022_PE.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
-				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"DS_CARGO", type text}, {"NR_VOTAVEL", Int64.Type}, {"NM_VOTAVEL", type text}, {"QT_VOTOS", Int64.Type}, {"loc_key", type text}}),
-				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Unnamed: 0"}),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"NR_ZONA", Int64.Type}, {"NR_SECAO", Int64.Type}, {"DS_CARGO", type text}, {"NR_VOTAVEL", Int64.Type}, {"NM_VOTAVEL", type text}, {"QT_VOTOS", Int64.Type}, {"LOC_KEY", type text}}),
 				    #"Add CAND_KEY" = Table.AddColumn(
-				    #"Removed Columns",
+				    #"Changed Type",
 				    "CAND_KEY",
 				    each 
 				        Text.From([DS_CARGO]) & 
 				        "-" & 
 				        Text.From([NR_VOTAVEL]),
 				    type text
-				),
-				    #"Filtered Rows" = Table.SelectRows(#"Add CAND_KEY", each Text.Contains([NM_VOTAVEL], "FERREIRA"))
+				)
 				in
-				    #"Filtered Rows"
+				    #"Add CAND_KEY"
 				```
 
 	annotation PBI_NavigationStepName = Navigation
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

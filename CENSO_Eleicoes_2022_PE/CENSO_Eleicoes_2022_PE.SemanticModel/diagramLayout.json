@@ -5,13 +5,13 @@
       "ordinal": 0,
       "scrollPosition": {
         "x": 0,
-        "y": 0
+        "y": 65
       },
       "nodes": [
         {
           "location": {
             "x": 735,
-            "y": 0
+            "y": 37.5
           },
           "nodeIndex": "votacao_secao_2022_PE",
           "nodeLineageTag": "20365395-a5df-40b9-ae90-c46923de03ea",
@@ -25,7 +25,7 @@
         {
           "location": {
             "x": 0,
-            "y": 0
+            "y": 37.5
           },
           "nodeIndex": "▼ Medidas DAX",
           "nodeLineageTag": "5cd2100d-026b-43d7-acbb-93fcb21ae1a9",
@@ -38,7 +38,7 @@
         {
           "location": {
             "x": 416,
-            "y": 101
+            "y": 138.5
           },
           "nodeIndex": "presenca_secao_2022_PE",
           "size": {
@@ -50,8 +50,8 @@
         },
         {
           "location": {
-            "x": 658,
-            "y": 290
+            "x": 749.25,
+            "y": 381.25
           },
           "nodeIndex": "perfil_eleitor_secao_2022_PE",
           "nodeLineageTag": "f0b7d84e-f682-4925-a70e-7315ef20a2ca",
@@ -65,7 +65,7 @@
         {
           "location": {
             "x": 1021.75,
-            "y": 150.25
+            "y": 187.75
           },
           "nodeIndex": "perfil_cand_2022_PE",
           "nodeLineageTag": "a6f19ea1-8c11-4fe0-823b-aff867d40d29",
@@ -78,8 +78,8 @@
         },
         {
           "location": {
-            "x": 259.25,
-            "y": 384.25
+            "x": 1016.75,
+            "y": 80.5
           },
           "nodeIndex": "rede_social_candidato_2022_PE",
           "nodeLineageTag": "f6bcb7e3-0e83-4235-b3e1-a87544e4349b",
@@ -89,6 +89,47 @@
           },
           "zIndex": 0,
           "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1015.1666666666667,
+            "y": 434.79166666666669
+          },
+          "nodeIndex": "desempenho_eleitor_secao_2022_PE",
+          "nodeLineageTag": "4462377d-7ea4-4fd2-8f52-d0864721b2de",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 743.25000000000011,
+            "y": 515.625
+          },
+          "nodeIndex": "proporcao_eleitor_secao_2022_PE",
+          "nodeLineageTag": "1c5c5306-b7ca-42d1-b1fb-89c198b58a2d",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0,
+          "expandedHeight": 300
+        },
+        {
+          "location": {
+            "x": 1292,
+            "y": 47.3125
+          },
+          "nodeIndex": "resultados_secao_2022_PE",
+          "nodeLineageTag": "a5de3243-3e86-44ca-a5ff-1b1a171b5c20",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
         }
       ],
       "name": "All tables",

@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "CENSO_Eleicoes_2022_PE"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "2a1af392-5319-41cf-8fc7-5606817dfa73"
+  }
+}

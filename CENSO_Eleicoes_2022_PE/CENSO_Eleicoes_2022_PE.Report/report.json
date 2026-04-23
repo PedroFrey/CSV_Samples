@@ -1,0 +1,359 @@
+{
+  "config": "{\"version\":\"5.71\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY25SU12\",\"type\":2,\"version\":{\"visual\":\"2.5.0\",\"report\":\"3.1.0\",\"page\":\"2.3.0\"}}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":2,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY25SU12",
+            "path": "BaseThemes/CY25SU12.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    },
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "Pedro_Logo_Aumentada3848526667670954.jpg",
+            "path": "Pedro_Logo_Aumentada3848526667670954.jpg",
+            "type": 100
+          }
+        ],
+        "name": "RegisteredResources",
+        "type": 1
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "Principal",
+      "displayOption": 2,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "801716b65eacf4312e43",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"1955cef88836abd96cfc\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":63.77952755905511,\"z\":3000,\"width\":1279.8425196850392,\"height\":83.62204724409449,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 83.62,
+          "width": 1279.84,
+          "x": 0.00,
+          "y": 63.78,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"262a9d871a2e8bcd7c37\",\"layouts\":[{\"id\":0,\"position\":{\"x\":105,\"y\":8.214285714285715,\"z\":2000,\"width\":23.92857142857143,\"height\":44.28571428571429,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90D\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 44.29,
+          "width": 23.93,
+          "x": 105.00,
+          "y": 8.21,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"36f05245a1840a944613\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.0157480314961,\"y\":360,\"z\":11000,\"width\":487.5590551181102,\"height\":325.98425196850394,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"},{\"queryRef\":\"▼ Medidas DAX.Qtd votos\"},{\"queryRef\":\"▼ Medidas DAX.Qtd COMPARECIMENTO\"},{\"queryRef\":\"▼ Medidas DAX.% votos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0},{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd votos\"},\"Name\":\"▼ Medidas DAX.Qtd votos\",\"NativeReferenceName\":\"Votos\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"% votos\"},\"Name\":\"▼ Medidas DAX.% votos\",\"NativeReferenceName\":\"% votos\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd comparecimento\"},\"Name\":\"▼ Medidas DAX.Qtd COMPARECIMENTO\",\"NativeReferenceName\":\"Comparecimento\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"% votos\"}}}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"},\"▼ Medidas DAX.Qtd votos\":{\"displayName\":\"Votos\"},\"▼ Medidas DAX.Qtd COMPARECIMENTO\":{\"displayName\":\"Comparecimento\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"values\":[{\"properties\":{\"backColor\":{\"solid\":{\"color\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"▼ Medidas DAX\"}},\"Property\":\"str ColorCode votos\"}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"}}],\"columnFormatting\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'AlternatingRowsNew'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 325.98,
+          "width": 487.56,
+          "x": 754.02,
+          "y": 360.00,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"6c5c1f424f51781ac560\",\"layouts\":[{\"id\":0,\"position\":{\"x\":226.77165354330708,\"y\":63.77952755905511,\"z\":7000,\"width\":208.34645669291336,\"height\":89.29133858267716,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"votacao_secao_2022_PE.DS_CARGO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"DS_CARGO\"},\"Name\":\"votacao_secao_2022_PE.DS_CARGO\",\"NativeReferenceName\":\"Cargo\"}]},\"columnProperties\":{\"votacao_secao_2022_PE.DS_CARGO\":{\"displayName\":\"Cargo\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"DS_CARGO\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'DEPUTADO FEDERAL'\"}}]]}}}]}}}}],\"items\":[{\"properties\":{\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 208.35,
+          "x": 226.77,
+          "y": 63.78,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"7659ec31129a687134dd\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1074.3307086614172,\"y\":164.40944881889763,\"z\":9000,\"width\":175.748031496063,\"height\":89.29133858267716,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.Qtd votos\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd votos\"},\"Name\":\"▼ Medidas DAX.Qtd votos\",\"NativeReferenceName\":\"Qtd votos\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd votos\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"▼ Medidas DAX.Qtd votos\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"autoGrid\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Qtd Votos'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 175.75,
+          "x": 1074.33,
+          "y": 164.41,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"7b58b8f5f5b97ac2bb1f\",\"layouts\":[{\"id\":0,\"position\":{\"x\":5.669291338582677,\"y\":8.503937007874015,\"z\":12000,\"width\":99.21259842519684,\"height\":46.77165354330708,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'octagon'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 46.77,
+          "width": 99.21,
+          "x": 5.67,
+          "y": 8.50,
+          "z": 12000.00
+        },
+        {
+          "config": "{\"name\":\"afcb42cff95c9a1c6199\",\"layouts\":[{\"id\":0,\"position\":{\"x\":795.1181102362204,\"y\":63.77952755905511,\"z\":14000,\"width\":225.3543307086614,\"height\":89.29133858267716,\"tabOrder\":14000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"perfil_cand_2022_PE.NM_PARTIDO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"perfil_cand_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_PARTIDO\"},\"Name\":\"perfil_cand_2022_PE.NM_PARTIDO\",\"NativeReferenceName\":\"NM_PARTIDO\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 225.35,
+          "x": 795.12,
+          "y": 63.78,
+          "z": 14000.00
+        },
+        {
+          "config": "{\"name\":\"bd7d0a72b0685a1ac914\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.16,\"height\":63.36,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 63.36,
+          "width": 1280.16,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"c354d2dc4704c5042444\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1054.4881889763778,\"y\":63.77952755905511,\"z\":15000,\"width\":225.3543307086614,\"height\":89.29133858267716,\"tabOrder\":15000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"perfil_cand_2022_PE.DS_SIT_TOT_TURNO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"perfil_cand_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"DS_SIT_TOT_TURNO\"},\"Name\":\"perfil_cand_2022_PE.DS_SIT_TOT_TURNO\",\"NativeReferenceName\":\"DS_SIT_TOT_TURNO\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 225.35,
+          "x": 1054.49,
+          "y": 63.78,
+          "z": 15000.00
+        },
+        {
+          "config": "{\"name\":\"c3dec9246fc9d90d6405\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.3961352657005,\"y\":163.86473429951693,\"z\":10000,\"width\":307.6328502415459,\"height\":89.66183574879227,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.Cidade Selecionada\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"str Cidade Selecionada\"},\"Name\":\"▼ Medidas DAX.Cidade Selecionada\",\"NativeReferenceName\":\"Cidade Selecionada\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}},\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}}},\"selector\":{\"metadata\":\"▼ Medidas DAX.Cidade Selecionada\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"autoGrid\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'Cards'\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Cidades'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.66,
+          "width": 307.63,
+          "x": 754.40,
+          "y": 163.86,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"ce084fe6854bc2000c3e\",\"layouts\":[{\"id\":0,\"position\":{\"x\":14.166666666666668,\"y\":164.16666666666669,\"z\":6000,\"width\":726.6666666666667,\"height\":367.5,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"filledMap\",\"projections\":{\"Category\":[{\"queryRef\":\"presenca_secao_2022_PE.UF\",\"active\":true},{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UF\"},\"Name\":\"presenca_secao_2022_PE.UF\",\"NativeReferenceName\":\"UF\"}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}}}}],\"dataPoint\":[{\"properties\":{\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"▼ Medidas DAX\"}},\"Property\":\"str ColorCode votos\"}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Resultados por Cidade'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 367.50,
+          "width": 726.67,
+          "x": 14.17,
+          "y": 164.17,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"d88429a2dfcd9c630fc3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":35.437430786267996,\"y\":581.1738648947952,\"z\":16000,\"width\":208.37209302325581,\"height\":83.63233665559247,\"tabOrder\":16000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"presenca_secao_2022_PE.LOC_KEY\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"LOC_KEY\"},\"Name\":\"presenca_secao_2022_PE.LOC_KEY\",\"NativeReferenceName\":\"LOC_KEY\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"LOC_KEY\"}},\"Right\":{\"Literal\":{\"Value\":\"'Z42s99'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"LOC_KEY\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'Z42S99'\"}}]]}}}]}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 83.63,
+          "width": 208.37,
+          "x": 35.44,
+          "y": 581.17,
+          "z": 16000.00
+        },
+        {
+          "config": "{\"name\":\"e88d58805f7b471808bf\",\"layouts\":[{\"id\":0,\"position\":{\"x\":24.482758620689655,\"y\":8.275862068965518,\"z\":13000,\"width\":61.37931034482759,\"height\":47.241379310344826,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceFile\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Pedro Logo Aumentada.jpg'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Pedro_Logo_Aumentada3848526667670954.jpg\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 47.24,
+          "width": 61.38,
+          "x": 24.48,
+          "y": 8.28,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"e9119fc9d0a3c2eb5d3d\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":63.77952755905511,\"z\":4000,\"width\":208.34645669291336,\"height\":83.62204724409449,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 83.62,
+          "width": 208.35,
+          "x": 0.00,
+          "y": 63.78,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"f33192b04b8b1bd6a295\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.3961352657005,\"y\":272.07729468599035,\"z\":8000,\"width\":354.00966183574883,\"height\":75.74879227053141,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\" ▶\",\"textStyle\":{\"color\":\"#059622\"}},{\"value\":\" Verde = Votação acima de 5 % na cidade\"}]},{\"textRuns\":[{\"value\":\" \",\"textStyle\":{\"color\":\"#12239e\"}},{\"value\":\"▶\",\"textStyle\":{\"color\":\"#e62609\"}},{\"value\":\" Vermelho = Votação abaixo de 0.5 % na cidade\"}]},{\"textRuns\":[{\"value\":\" \"},{\"value\":\"▶\",\"textStyle\":{\"color\":\"#414fb1\"}},{\"value\":\" Azul = Votação entre 5% e 0,5% na cidade\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 75.75,
+          "width": 354.01,
+          "x": 754.40,
+          "y": 272.08,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"f49b12eecf37fd5545b2\",\"layouts\":[{\"id\":0,\"position\":{\"x\":104.88188976377953,\"y\":0,\"z\":1000,\"width\":497.48031496062987,\"height\":63.77952755905511,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.Dashboard Title\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Dashboard Title\"},\"Name\":\"▼ Medidas DAX.Dashboard Title\",\"NativeReferenceName\":\"Dashboard Title\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 63.78,
+          "width": 497.48,
+          "x": 104.88,
+          "y": 0.00,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"fb6443a59b3e74883448\",\"layouts\":[{\"id\":0,\"position\":{\"x\":453.54330708661416,\"y\":60.94488188976378,\"z\":5000,\"width\":341.5748031496063,\"height\":89.29133858267716,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"votacao_secao_2022_PE.NM_VOTAVEL\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"},\"Name\":\"votacao_secao_2022_PE.NM_VOTAVEL\",\"NativeReferenceName\":\"Candidatos\"}]},\"columnProperties\":{\"votacao_secao_2022_PE.NM_VOTAVEL\":{\"displayName\":\"Candidatos\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"selfFilter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"Contains\":{\"Left\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"}},\"Right\":{\"Literal\":{\"Value\":\"'ferrei'\"}}}},\"Annotations\":{\"PowerBI.MParameterBehavior\":1}}]}},\"filter\":{\"filter\":{\"Version\":2,\"From\":[{\"Name\":\"v\",\"Entity\":\"votacao_secao_2022_PE\",\"Type\":0}],\"Where\":[{\"Condition\":{\"In\":{\"Expressions\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"v\"}},\"Property\":\"NM_VOTAVEL\"}}],\"Values\":[[{\"Literal\":{\"Value\":\"'ANDRÉ FERREIRA RODRIGUES'\"}}]]}}}]}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 341.57,
+          "x": 453.54,
+          "y": 60.94,
+          "z": 5000.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"22D\"}}}}}]},\"visibility\":1}",
+      "displayName": "Dev Page",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "d9b018be899ecff344fa",
+      "ordinal": 2,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"d8956fa7b995c575b481\",\"layouts\":[{\"id\":0,\"position\":{\"x\":236.69291338582676,\"y\":140.31496062992125,\"z\":0,\"width\":280.6299212598425,\"height\":280.6299212598425,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"drillFilterOtherVisuals\":true}}",
+          "filters": "[]",
+          "height": 280.63,
+          "width": 280.63,
+          "x": 236.69,
+          "y": 140.31,
+          "z": 0.00
+        }
+      ],
+      "width": 1280.00
+    },
+    {
+      "config": "{\"objects\":{\"background\":[{\"properties\":{\"color\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}]}}",
+      "displayName": "Grau Instrução",
+      "displayOption": 1,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "f887bc3c2e74072d881f",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0384f9af6787208fc475\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":63.77952755905511,\"z\":4000,\"width\":1279.8425196850392,\"height\":83.62204724409449,\"tabOrder\":4000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 83.62,
+          "width": 1279.84,
+          "x": 0.00,
+          "y": 63.78,
+          "z": 4000.00
+        },
+        {
+          "config": "{\"name\":\"1d321d93c3bb6794c261\",\"layouts\":[{\"id\":0,\"position\":{\"x\":104.88188976377953,\"y\":0,\"z\":2000,\"width\":497.48031496062987,\"height\":63.77952755905511,\"tabOrder\":2000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.Dashboard Title\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Dashboard Title\"},\"Name\":\"▼ Medidas DAX.Dashboard Title\",\"NativeReferenceName\":\"Dashboard Title\"}]},\"drillFilterOtherVisuals\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"20D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 63.78,
+          "width": 497.48,
+          "x": 104.88,
+          "y": 0.00,
+          "z": 2000.00
+        },
+        {
+          "config": "{\"name\":\"3f8581c81f238e56114c\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.0157480314961,\"y\":259.37007874015745,\"z\":10000,\"width\":518.7401574803149,\"height\":89.29133858267716,\"tabOrder\":10000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.Grau_Dominante\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"str Grau_Dominante\"},\"Name\":\"▼ Medidas DAX.Grau_Dominante\",\"NativeReferenceName\":\"str Grau_Dominante\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"autoGrid\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'Cards'\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Instrução dominante'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 518.74,
+          "x": 754.02,
+          "y": 259.37,
+          "z": 10000.00
+        },
+        {
+          "config": "{\"name\":\"5424a78d2d40993660f6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":17.00787401574803,\"y\":164.40944881889763,\"z\":6000,\"width\":727.0866141732283,\"height\":313.2283464566929,\"tabOrder\":6000}}],\"singleVisual\":{\"visualType\":\"filledMap\",\"projections\":{\"Category\":[{\"queryRef\":\"presenca_secao_2022_PE.UF\",\"active\":true},{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UF\"},\"Name\":\"presenca_secao_2022_PE.UF\",\"NativeReferenceName\":\"UF\"}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}}}}],\"dataPoint\":[{\"properties\":{\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"▼ Medidas DAX\"}},\"Property\":\"str ColorCode Grau\"}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Grau de instrução por Cidade'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 313.23,
+          "width": 727.09,
+          "x": 17.01,
+          "y": 164.41,
+          "z": 6000.00
+        },
+        {
+          "config": "{\"name\":\"55d72a116e283f805843\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":63.77952755905511,\"z\":5000,\"width\":208.34645669291336,\"height\":83.62204724409449,\"tabOrder\":5000}}],\"singleVisual\":{\"visualType\":\"slicer\",\"projections\":{\"Values\":[{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"data\":[{\"properties\":{\"mode\":{\"expr\":{\"Literal\":{\"Value\":\"'Dropdown'\"}}}}}],\"header\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}}}}],\"pendingChangesIcon\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"items\":[{\"properties\":{\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":4,\"Percent\":-0.5}}}}},\"background\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.3}}}}}}}],\"general\":[{\"properties\":{\"selfFilterEnabled\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 83.62,
+          "width": 208.35,
+          "x": 0.00,
+          "y": 63.78,
+          "z": 5000.00
+        },
+        {
+          "config": "{\"name\":\"62cb249aa0f13246ef4b\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.1666666666667,\"y\":515.8333333333334,\"z\":9000,\"width\":518.3333333333334,\"height\":204.16666666666669,\"tabOrder\":9000}}],\"singleVisual\":{\"visualType\":\"tableEx\",\"projections\":{\"Values\":[{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"},{\"queryRef\":\"perfil_eleitor_secao_2020_PE.DS_GRAU_ESCOLARIDADE\"},{\"queryRef\":\"perfil_eleitor_secao_2022_PE.DS_FAIXA_ETARIA\"},{\"queryRef\":\"▼ Medidas DAX.Qtd perfil\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0},{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0},{\"Name\":\"p1\",\"Entity\":\"perfil_eleitor_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"},{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd perfil\"},\"Name\":\"▼ Medidas DAX.Qtd perfil\",\"NativeReferenceName\":\"Eleitores\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"DS_GRAU_ESCOLARIDADE\"},\"Name\":\"perfil_eleitor_secao_2020_PE.DS_GRAU_ESCOLARIDADE\",\"NativeReferenceName\":\"DS_GRAU_ESCOLARIDADE\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p1\"}},\"Property\":\"DS_FAIXA_ETARIA\"},\"Name\":\"perfil_eleitor_secao_2022_PE.DS_FAIXA_ETARIA\",\"NativeReferenceName\":\"DS_FAIXA_ETARIA\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd perfil\"}}}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"},\"▼ Medidas DAX.Qtd perfil\":{\"displayName\":\"Eleitores\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"grid\":[{\"properties\":{\"gridHorizontal\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"outlineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}}}],\"values\":[{\"properties\":{},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}],\"metadata\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"}}],\"columnFormatting\":[{\"properties\":{\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"metadata\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"}}],\"columnWidth\":[{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"219.00000340502905D\"}}}},\"selector\":{\"metadata\":\"perfil_eleitor_secao_2020_PE.DS_GRAU_ESCOLARIDADE\"}},{\"properties\":{\"value\":{\"expr\":{\"Literal\":{\"Value\":\"149.73229089928572D\"}}}},\"selector\":{\"metadata\":\"presenca_secao_2022_PE.NM_MUNICIPIO\"}}]},\"vcObjects\":{\"stylePreset\":[{\"properties\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'AlternatingRowsNew'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 204.17,
+          "width": 518.33,
+          "x": 754.17,
+          "y": 515.83,
+          "z": 9000.00
+        },
+        {
+          "config": "{\"name\":\"65a2ba9371933b8f1e28\",\"layouts\":[{\"id\":0,\"position\":{\"x\":105,\"y\":8.214285714285715,\"z\":3000,\"width\":23.92857142857143,\"height\":44.28571428571429,\"tabOrder\":3000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'line'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}},\"angle\":{\"expr\":{\"Literal\":{\"Value\":\"90D\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}],\"outline\":[{\"properties\":{\"lineColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.1}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 44.29,
+          "width": 23.93,
+          "x": 105.00,
+          "y": 8.21,
+          "z": 3000.00
+        },
+        {
+          "config": "{\"name\":\"923d6ac4ade9bd5f41b3\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.1666666666667,\"y\":360,\"z\":7000,\"width\":518.3333333333334,\"height\":144.16666666666669,\"tabOrder\":7000}}],\"singleVisual\":{\"visualType\":\"textbox\",\"drillFilterOtherVisuals\":true,\"objects\":{\"general\":[{\"properties\":{\"paragraphs\":[{\"textRuns\":[{\"value\":\"Vermelho \",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\" – Grau “ANALFABETO”\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Laranja \",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\" – Grau “LÊ E ESCREVE”\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Amarelo\",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\" – Grau “ENSINO FUNDAMENTAL INCOMPLETO”\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Azul Claro \",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\" – Grau “ENSINO FUNDAMENTAL COMPLETO”\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Azul \",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\"– Grau “ENSINO MÉDIO INCOMPLETO”\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Azul Escuro \",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\" – Grau “ENSINO MÉDIO COMPLETO”\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"Cinza\",\"textStyle\":{\"fontWeight\":\"bold\"}},{\"value\":\" – Qualquer outro caso ou valor não informado.\"}],\"listType\":\"bullet\"},{\"textRuns\":[{\"value\":\"\"}]}]}}]}}}",
+          "filters": "[]",
+          "height": 144.17,
+          "width": 518.33,
+          "x": 754.17,
+          "y": 360.00,
+          "z": 7000.00
+        },
+        {
+          "config": "{\"name\":\"a4b0f793d22f6e5aa7d6\",\"layouts\":[{\"id\":0,\"position\":{\"x\":1067.244094488189,\"y\":162.99212598425197,\"z\":11000,\"width\":205.51181102362204,\"height\":89.29133858267716,\"tabOrder\":11000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.Qtd perfil\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd perfil\"},\"Name\":\"▼ Medidas DAX.Qtd perfil\",\"NativeReferenceName\":\"Qtd perfil\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"Qtd perfil\"}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"labelDisplayUnits\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}},\"selector\":{\"metadata\":\"▼ Medidas DAX.Qtd perfil\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"autoGrid\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'Cards'\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Eleitores'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.29,
+          "width": 205.51,
+          "x": 1067.24,
+          "y": 162.99,
+          "z": 11000.00
+        },
+        {
+          "config": "{\"name\":\"c858ac31636a73bbb7d1\",\"layouts\":[{\"id\":0,\"position\":{\"x\":754.3961352657005,\"y\":163.86473429951693,\"z\":8000,\"width\":307.6328502415459,\"height\":89.66183574879227,\"tabOrder\":8000}}],\"singleVisual\":{\"visualType\":\"cardVisual\",\"projections\":{\"Data\":[{\"queryRef\":\"▼ Medidas DAX.str Cidade Selecionada\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"▼\",\"Entity\":\"▼ Medidas DAX\",\"Type\":0}],\"Select\":[{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Source\":\"▼\"}},\"Property\":\"str Cidade Selecionada\"},\"Name\":\"▼ Medidas DAX.str Cidade Selecionada\",\"NativeReferenceName\":\"str Cidade Selecionada\"}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true,\"objects\":{\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"divider\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"fillCustom\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"label\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"value\":[{\"properties\":{\"fontSize\":{\"expr\":{\"Literal\":{\"Value\":\"12D\"}}},\"fontColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":1,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}],\"cardCalloutArea\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}}],\"layout\":[{\"properties\":{\"backgroundShow\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}},\"selector\":{\"id\":\"default\"}},{\"properties\":{\"autoGrid\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"maxTiles\":{\"expr\":{\"Literal\":{\"Value\":\"1L\"}}},\"style\":{\"expr\":{\"Literal\":{\"Value\":\"'Cards'\"}}}}}]},\"vcObjects\":{\"visualHeader\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}],\"title\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Cidades'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 89.66,
+          "width": 307.63,
+          "x": 754.40,
+          "y": 163.86,
+          "z": 8000.00
+        },
+        {
+          "config": "{\"name\":\"d5deb57c3942aada5a23\",\"layouts\":[{\"id\":0,\"position\":{\"x\":24.482758620689655,\"y\":8.275862068965518,\"z\":13000,\"width\":61.37931034482759,\"height\":47.241379310344826,\"tabOrder\":13000}}],\"singleVisual\":{\"visualType\":\"image\",\"drillFilterOtherVisuals\":true,\"objects\":{\"image\":[{\"properties\":{\"sourceFile\":{\"image\":{\"name\":{\"expr\":{\"Literal\":{\"Value\":\"'Pedro Logo Aumentada.jpg'\"}}},\"url\":{\"expr\":{\"ResourcePackageItem\":{\"PackageName\":\"RegisteredResources\",\"PackageType\":1,\"ItemName\":\"Pedro_Logo_Aumentada3848526667670954.jpg\"}}},\"scaling\":{\"expr\":{\"Literal\":{\"Value\":\"'Normal'\"}}}}}}}]}}}",
+          "filters": "[]",
+          "height": 47.24,
+          "width": 61.38,
+          "x": 24.48,
+          "y": 8.28,
+          "z": 13000.00
+        },
+        {
+          "config": "{\"name\":\"e10dcf070cd8f79bd686\",\"layouts\":[{\"id\":0,\"position\":{\"x\":5.669291338582677,\"y\":8.503937007874015,\"z\":1000,\"width\":99.21259842519684,\"height\":46.77165354330708,\"tabOrder\":1000}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'octagon'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":0}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 46.77,
+          "width": 99.21,
+          "x": 5.67,
+          "y": 8.50,
+          "z": 1000.00
+        },
+        {
+          "config": "{\"name\":\"e7010f0b7a90ba35cd57\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":0,\"z\":0,\"width\":1280.16,\"height\":63.36,\"tabOrder\":0}}],\"singleVisual\":{\"visualType\":\"shape\",\"drillFilterOtherVisuals\":true,\"objects\":{\"shape\":[{\"properties\":{\"tileShape\":{\"expr\":{\"Literal\":{\"Value\":\"'rectangle'\"}}}}}],\"rotation\":[{\"properties\":{\"shapeAngle\":{\"expr\":{\"Literal\":{\"Value\":\"0L\"}}}}}],\"outline\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}}}}],\"fill\":[{\"properties\":{\"fillColor\":{\"solid\":{\"color\":{\"expr\":{\"ThemeDataColor\":{\"ColorId\":0,\"Percent\":-0.5}}}}}},\"selector\":{\"id\":\"default\"}}]}},\"howCreated\":\"InsertVisualButton\"}",
+          "filters": "[]",
+          "height": 63.36,
+          "width": 1280.16,
+          "x": 0.00,
+          "y": 0.00,
+          "z": 0.00
+        },
+        {
+          "config": "{\"name\":\"fc05a28d704dcb835c02\",\"layouts\":[{\"id\":0,\"position\":{\"x\":0,\"y\":477.6377952755905,\"z\":12000,\"width\":744.0944881889764,\"height\":242.36220472440942,\"tabOrder\":12000}}],\"singleVisual\":{\"visualType\":\"filledMap\",\"projections\":{\"Category\":[{\"queryRef\":\"presenca_secao_2022_PE.UF\",\"active\":true},{\"queryRef\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"active\":true}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"p\",\"Entity\":\"presenca_secao_2022_PE\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"NM_MUNICIPIO\"},\"Name\":\"presenca_secao_2022_PE.NM_MUNICIPIO\",\"NativeReferenceName\":\"Cidade\"},{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"p\"}},\"Property\":\"UF\"},\"Name\":\"presenca_secao_2022_PE.UF\",\"NativeReferenceName\":\"UF\"}]},\"columnProperties\":{\"presenca_secao_2022_PE.NM_MUNICIPIO\":{\"displayName\":\"Cidade\"}},\"drillFilterOtherVisuals\":true,\"objects\":{\"mapStyles\":[{\"properties\":{\"mapTheme\":{\"expr\":{\"Literal\":{\"Value\":\"'grayscale'\"}}}}}],\"dataPoint\":[{\"properties\":{\"showAllDataPoints\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"fillRule\":{\"linearGradient2\":{\"min\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'minColor'\"}}}},\"max\":{\"color\":{\"expr\":{\"Literal\":{\"Value\":\"'maxColor'\"}}}},\"nullColoringStrategy\":{\"strategy\":{\"expr\":{\"Literal\":{\"Value\":\"'asZero'\"}}}}}}}},{\"properties\":{\"fill\":{\"solid\":{\"color\":{\"expr\":{\"Measure\":{\"Expression\":{\"SourceRef\":{\"Entity\":\"▼ Medidas DAX\"}},\"Property\":\"str ColorCode Idade\"}}}}}},\"selector\":{\"data\":[{\"dataViewWildcard\":{\"matchingOption\":1}}]}}],\"mapControls\":[{\"properties\":{\"showZoomButtons\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]},\"vcObjects\":{\"title\":[{\"properties\":{\"titleWrap\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}},\"text\":{\"expr\":{\"Literal\":{\"Value\":\"'Faixa etária por Cidade'\"}}},\"fontFamily\":{\"expr\":{\"Literal\":{\"Value\":\"'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'\"}}}}}],\"background\":[{\"properties\":{\"show\":{\"expr\":{\"Literal\":{\"Value\":\"false\"}}},\"transparency\":{\"expr\":{\"Literal\":{\"Value\":\"0D\"}}}}}],\"border\":[{\"properties\":{\"width\":{\"expr\":{\"Literal\":{\"Value\":\"1D\"}}}}}]}}}",
+          "filters": "[]",
+          "height": 242.36,
+          "width": 744.09,
+          "x": 0.00,
+          "y": 477.64,
+          "z": 12000.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+
+DEFINE
+VAR MiniTable = 
+    SUMMARIZE (
+        perfil_eleitor_secao_2020_PE,
+        perfil_eleitor_secao_2020_PE[NM_MUNICIPIO],
+        perfil_eleitor_secao_2020_PE[DS_GRAU_ESCOLARIDADE],
+        "@Qtd perfil", [Qtd perfil]
+    )
+
+VAR Dominancia = ADDCOLUMNS(MiniTable,"Qtd maxima", 
+
+EVALUATE
+
+ORDER by perfil_eleitor_secao_2020_PE[NM_MUNICIPIO]

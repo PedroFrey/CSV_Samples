@@ -1,0 +1,204 @@
+table '▼ Medidas DAX'
+	lineageTag: 5cd2100d-026b-43d7-acbb-93fcb21ae1a9
+
+	measure 'Qtd votos' = SUM(votacao_secao_2022_PE[QT_VOTOS])
+		formatString: #,0
+		displayFolder: 01.  Votos
+		lineageTag: dee2ce7a-4df1-4582-a3a1-f2dc47dbd7f4
+
+	measure 'Qtd perfil' = SUM(perfil_eleitor_secao_2022_PE[QT_ELEITORES_PERFIL])
+		formatString: #,0
+		displayFolder: 02. Perfils
+		lineageTag: f6719924-d84c-46fb-a842-bd98dc78565b
+
+	measure 'Qtd comparecimento' = SUM(presenca_secao_2022_PE[QT_COMPARECIMENTO])
+		formatString: #,0
+		displayFolder: 01.  Votos
+		lineageTag: 30363441-34e9-44bb-9d1f-5c2acc4fd7ba
+
+	measure '% votos' = DIVIDE([Qtd votos],[Qtd comparecimento])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 01.  Votos
+		lineageTag: 7224613c-9e3b-409b-8412-212e0eae673a
+
+	measure 'str ColorCode votos' = ```
+			SWITCH(TRUE(), 
+			[% votos] > 0.05, "DarkGreen",
+			[% votos] < 0.005, "Brown", --Red
+			 "Navy") -- Blue
+			```
+		displayFolder: 01.  Votos
+		lineageTag: 308dfa43-95ba-4cf5-ac2a-77f1e75ea24c
+
+	measure 'Dashboard Title' = "CENSO - Eleição 2022 - Pernambuco"
+		displayFolder: 00. Main
+		lineageTag: 20251514-9843-4670-b051-756a63705003
+
+	measure 'str Cidade Selecionada' =
+			
+			VAr cidade = SELECTEDVALUE(presenca_secao_2022_PE[NM_MUNICIPIO])
+			
+			VAR cond = SWITCH(TRUE(), ISBLANK(cidade), "Várias", cidade)
+			RETURN cond
+		displayFolder: 00. Main
+		lineageTag: 5b2713d0-d978-4465-af13-fea6262c488d
+
+	measure 'str Color code Perfil genero' = ```
+			
+			    SWITCH ( TRUE (), [% perfil Feminino] > 0.5 , "Brown", --Red 
+			    "Navy") -- Blue
+			```
+		displayFolder: 02. Perfils\01. Genero
+		lineageTag: defb16c5-8f31-40b9-a118-726a903070e0
+
+	measure 'Qtd total perfil genero' = ```
+			
+			CALCULATE([Qtd perfil], 
+			ALLSELECTED(perfil_eleitor_secao_2022_PE[DS_GENERO]))
+			```
+		formatString: #,0
+		displayFolder: 02. Perfils\01. Genero
+		lineageTag: f6aea154-c936-4f9f-8bbe-ab1cce5c5b79
+
+	measure 'Qtd perfil Feminino' = ```
+			
+			    CALCULATE (
+			        [Qtd perfil],
+			        KEEPFILTERS ( perfil_eleitor_secao_2022_PE[DS_GENERO] = "FEMININO" )
+			    )
+			```
+		formatString: 0
+		displayFolder: 02. Perfils\01. Genero
+		lineageTag: 32fe83e1-4b07-4c02-ba45-218ec6e5ffe1
+
+	measure '% perfil Feminino' = DIVIDE([Qtd perfil Feminino], [Qtd total perfil genero])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 02. Perfils\01. Genero
+		lineageTag: 523ef30a-450e-4efa-9bb7-004065aede38
+
+	measure '% perfil genero' = DIVIDE([Qtd perfil], [Qtd total perfil genero])
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 02. Perfils\01. Genero
+		lineageTag: 057fc0d1-65c6-4cae-95f7-79a27324a001
+
+	measure 'str Grau_Dominante' = ```
+			
+			VAR MiniTable = 
+			    SUMMARIZE(
+			        perfil_eleitor_secao_2022_PE,
+			        perfil_eleitor_secao_2022_PE[NM_MUNICIPIO],
+			        perfil_eleitor_secao_2022_PE[DS_GRAU_ESCOLARIDADE],
+			        "TotalPerfil", [Qtd perfil]
+			    )
+			VAR TopGrau =
+			    TOPN(
+			        1,
+			        FILTER(
+			            MiniTable,
+			            [NM_MUNICIPIO] = perfil_eleitor_secao_2022_PE[NM_MUNICIPIO]
+			        ),
+			        [TotalPerfil], DESC
+			    )
+			RETURN
+			MAXX(TopGrau, [DS_GRAU_ESCOLARIDADE])
+			```
+		displayFolder: 02. Perfils\02. Instrução
+		lineageTag: 1615f2f1-a1c1-4c5e-8cc7-2f23a289c5a7
+
+	measure 'str ColorCode Grau' =
+			
+			VAR Grau = [str Grau_Dominante]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Grau = "ANALFABETO", "#D73027",               -- vermelho forte
+			    Grau = "LÊ E ESCREVE", "#FC8D59",             -- laranja
+			    Grau = "ENSINO FUNDAMENTAL INCOMPLETO", "#FEE08B", -- amarelo
+			    Grau = "ENSINO FUNDAMENTAL COMPLETO", "#91BFDB",  -- azul claro
+			    Grau = "ENSINO MÉDIO INCOMPLETO", "#4575B4",      -- azul escuro
+			    Grau = "ENSINO MÉDIO COMPLETO", "#313695",        -- azul bem escuro
+			    "#999999"  -- cinza para qualquer outro caso
+			)
+		displayFolder: 02. Perfils\02. Instrução
+		lineageTag: a67a9464-a914-4eff-b5b4-1d58244489d0
+
+	measure 'str Faixa_Etaria_Dominante' = ```
+			
+			VAR MiniTable = 
+			    SUMMARIZE(
+			        perfil_eleitor_secao_2022_PE,
+			        perfil_eleitor_secao_2022_PE[NM_MUNICIPIO],
+			        perfil_eleitor_secao_2022_PE[DS_FAIXA_ETARIA],
+			        "TotalPerfil", [Qtd perfil]
+			    )
+			VAR TopGrau =
+			    TOPN(
+			        1,
+			        FILTER(
+			            MiniTable,
+			            [NM_MUNICIPIO] = perfil_eleitor_secao_2022_PE[NM_MUNICIPIO]
+			        ),
+			        [TotalPerfil], DESC
+			    )
+			RETURN
+			MAXX(TopGrau, [DS_FAIXA_ETARIA])
+			```
+		displayFolder: 02. Perfils\03. Faixa etária
+		lineageTag: 8ef9ea79-4e2e-47f6-9bfd-67cd6b5a5be5
+
+	measure 'str ColorCode Idade' =
+			
+			VAR Idade = [str Faixa_Etaria_Dominante]
+			RETURN
+			SWITCH(
+			    TRUE(),
+			    Idade = "16 anos", "#1b9e77",           -- verde
+			    Idade = "17 anos", "#d95f02",           -- laranja
+			    Idade = "18 anos", "#7570b3",           -- roxo
+			    Idade = "19 anos", "#e7298a",           -- rosa
+			    Idade = "20 anos", "#66a61e",           -- verde escuro
+			    Idade = "21 a 24 anos", "#e6ab02",      -- amarelo
+			    Idade = "25 a 29 anos", "#a6761d",      -- marrom
+			    Idade = "30 a 34 anos", "#666666",      -- cinza
+			    Idade = "35 a 39 anos", "#1f78b4",      -- azul
+			    Idade = "40 a 44 anos", "#b2df8a",      -- verde claro
+			    Idade = "45 a 49 anos", "#fb9a99",      -- rosa claro
+			    Idade = "50 a 54 anos", "#fdbf6f",      -- laranja claro
+			    Idade = "55 a 59 anos", "#cab2d6",      -- lilás
+			    Idade = "75 a 79 anos", "#6a3d9a",      -- roxo escuro
+			    "#999999"  -- cinza para qualquer outro caso
+			)
+		displayFolder: 02. Perfils\03. Faixa etária
+		lineageTag: bdf4a21a-7c87-4678-bfd2-0a02551994a1
+
+	measure 'Candidatos sem voto' = ```
+			
+			-- Medida sem utilização
+			COUNTROWS(EXCEPT(
+			
+			    SELECTCOLUMNS(perfil_cand_2022_PE,perfil_cand_2022_PE[NR_CANDIDATO])
+			    ,
+			    SELECTCOLUMNS(votacao_secao_2022_PE,votacao_secao_2022_PE[NR_VOTAVEL])
+			    
+			
+			    )
+			    )
+			```
+		formatString: 0
+		lineageTag: ff69e7e4-0d5c-417a-bcb1-96a0428723e3
+
+	partition '▼ Medidas DAX' = m
+		mode: import
+		source =
+				let
+				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{"Column1"}),
+				    #"▼ Others" = #"Removed Columns"
+				in
+				    #"▼ Others"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

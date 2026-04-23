@@ -1,0 +1,412 @@
+table proporcao_eleitor_secao_2022_PE
+	lineageTag: 1c5c5306-b7ca-42d1-b1fb-89c198b58a2d
+
+	column LOC_KEY
+		dataType: string
+		lineageTag: 2d079189-a71d-4223-8234-1198ade6612d
+		summarizeBy: none
+		sourceColumn: LOC_KEY
+
+		annotation SummarizationSetBy = Automatic
+
+	column FEMININO
+		dataType: double
+		lineageTag: ff860d9f-bbfd-4673-b184-4320b9f088cd
+		summarizeBy: sum
+		sourceColumn: FEMININO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column MASCULINO
+		dataType: double
+		lineageTag: 6f7b06df-81de-42a2-9ceb-5499c4a4ddf5
+		summarizeBy: sum
+		sourceColumn: MASCULINO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ANALFABETO
+		dataType: double
+		lineageTag: 42f0f5fd-ae1d-4f4f-8860-b42c734b7fad
+		summarizeBy: sum
+		sourceColumn: ANALFABETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ENSINO_FUNDAMENTAL_COMPLETO
+		dataType: double
+		lineageTag: 79406d4d-efe5-488d-bda6-cb513b0dc574
+		summarizeBy: sum
+		sourceColumn: ENSINO_FUNDAMENTAL_COMPLETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ENSINO_FUNDAMENTAL_INCOMPLETO
+		dataType: double
+		lineageTag: dbfdc5e2-3b91-4648-803d-0fe063654fc9
+		summarizeBy: sum
+		sourceColumn: ENSINO_FUNDAMENTAL_INCOMPLETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ENSINO_MEDIO_COMPLETO
+		dataType: double
+		lineageTag: b0b09e91-68b7-4dfb-81d5-d19792fd5665
+		summarizeBy: sum
+		sourceColumn: ENSINO_MEDIO_COMPLETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ENSINO_MEDIO_INCOMPLETO
+		dataType: double
+		lineageTag: 903b8407-3b24-41a0-aa99-7344fcbf8d2e
+		summarizeBy: sum
+		sourceColumn: ENSINO_MEDIO_INCOMPLETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LE_E_ESCREVE
+		dataType: double
+		lineageTag: 3359abd7-f89a-447d-b68f-624bb4c62f5b
+		summarizeBy: sum
+		sourceColumn: LE_E_ESCREVE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SUPERIOR_COMPLETO
+		dataType: double
+		lineageTag: c0ef32bb-d43a-4f42-aa00-ef67b485aef1
+		summarizeBy: sum
+		sourceColumn: SUPERIOR_COMPLETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SUPERIOR_INCOMPLETO
+		dataType: double
+		lineageTag: a5faa9a7-3295-40dd-a423-e00ad3b86156
+		summarizeBy: sum
+		sourceColumn: SUPERIOR_INCOMPLETO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 100_ANOS_OU_MAIS
+		dataType: int64
+		formatString: 0
+		lineageTag: 8655c291-c804-4512-bf65-a21ac9b141f9
+		summarizeBy: sum
+		sourceColumn: 100_ANOS_OU_MAIS
+
+		annotation SummarizationSetBy = Automatic
+
+	column 16_ANOS
+		dataType: double
+		lineageTag: 01a03ac0-4797-4361-8867-b6d92ea9c158
+		summarizeBy: sum
+		sourceColumn: 16_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 17_ANOS
+		dataType: double
+		lineageTag: 3261aae8-0a6a-4120-8fce-95e385e8cdcd
+		summarizeBy: sum
+		sourceColumn: 17_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 18_ANOS
+		dataType: double
+		lineageTag: 02b30ddd-f243-4119-b113-4ffbef5a9be2
+		summarizeBy: sum
+		sourceColumn: 18_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 19_ANOS
+		dataType: double
+		lineageTag: 770b7a5a-72c9-4907-bdaa-37915d1bbc22
+		summarizeBy: sum
+		sourceColumn: 19_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 20_ANOS
+		dataType: double
+		lineageTag: 8b3b73c9-5de5-4919-a20b-d10a4ea16805
+		summarizeBy: sum
+		sourceColumn: 20_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 21_A_24_ANOS
+		dataType: double
+		lineageTag: 3957ef87-2a8e-4188-ba4d-92b1718c2db0
+		summarizeBy: sum
+		sourceColumn: 21_A_24_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 25_A_29_ANOS
+		dataType: double
+		lineageTag: 9c991a96-c3ff-4fe5-921f-a89758f8739b
+		summarizeBy: sum
+		sourceColumn: 25_A_29_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 30_A_34_ANOS
+		dataType: double
+		lineageTag: 0eb1057c-e6f2-46c6-ab81-6bdc15d165e6
+		summarizeBy: sum
+		sourceColumn: 30_A_34_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 35_A_39_ANOS
+		dataType: double
+		lineageTag: 0ca64994-f6ec-4658-9a20-b17bfbdb6806
+		summarizeBy: sum
+		sourceColumn: 35_A_39_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 40_A_44_ANOS
+		dataType: double
+		lineageTag: 33cb6820-fda4-48b1-b2ef-8c914495eda6
+		summarizeBy: sum
+		sourceColumn: 40_A_44_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 45_A_49_ANOS
+		dataType: double
+		lineageTag: 69f55584-45c0-4614-800c-4ba08fb11707
+		summarizeBy: sum
+		sourceColumn: 45_A_49_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 50_A_54_ANOS
+		dataType: double
+		lineageTag: 9bdd773a-6d06-4a8a-b2f4-90251b209126
+		summarizeBy: sum
+		sourceColumn: 50_A_54_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 55_A_59_ANOS
+		dataType: double
+		lineageTag: f681b46c-8243-49af-aa84-66ca5ab549e6
+		summarizeBy: sum
+		sourceColumn: 55_A_59_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 60_A_64_ANOS
+		dataType: double
+		lineageTag: 50dc2288-ed37-4cef-a3dc-547917b2a6ba
+		summarizeBy: sum
+		sourceColumn: 60_A_64_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 65_A_69_ANOS
+		dataType: double
+		lineageTag: ec39f8e5-da12-479b-9fe6-de1fc56e1cf4
+		summarizeBy: sum
+		sourceColumn: 65_A_69_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 70_A_74_ANOS
+		dataType: double
+		lineageTag: 2e535cad-e2a8-4d67-a7e9-7a74e20c882f
+		summarizeBy: sum
+		sourceColumn: 70_A_74_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 75_A_79_ANOS
+		dataType: double
+		lineageTag: 4a1f9621-3a05-4714-b4a8-41097ec07afc
+		summarizeBy: sum
+		sourceColumn: 75_A_79_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 80_A_84_ANOS
+		dataType: double
+		lineageTag: 88908650-b786-4d84-8315-20278a30ad68
+		summarizeBy: sum
+		sourceColumn: 80_A_84_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 85_A_89_ANOS
+		dataType: double
+		lineageTag: 438ec949-70cf-4117-ad20-656c6f08fba0
+		summarizeBy: sum
+		sourceColumn: 85_A_89_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 90_A_94_ANOS
+		dataType: double
+		lineageTag: a1bf6c1e-4d2d-47b5-81ab-6aa2f7bf9405
+		summarizeBy: sum
+		sourceColumn: 90_A_94_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 95_A_99_ANOS
+		dataType: double
+		lineageTag: 3959d438-1dad-427f-81aa-da1a46e0d7d3
+		summarizeBy: sum
+		sourceColumn: 95_A_99_ANOS
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column INVALIDO
+		dataType: double
+		lineageTag: 4a780c31-32fb-4f60-a182-e28433fea324
+		summarizeBy: sum
+		sourceColumn: INVALIDO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CASADO
+		dataType: double
+		lineageTag: c4ee3a93-52ed-41a8-b0e5-fc7e17589c42
+		summarizeBy: sum
+		sourceColumn: CASADO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DIVORCIADO
+		dataType: double
+		lineageTag: f0757824-4869-4d46-8f09-56770341ec7e
+		summarizeBy: sum
+		sourceColumn: DIVORCIADO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SEPARADO_JUDICIALMENTE
+		dataType: double
+		lineageTag: 264f1bdb-b988-4244-af37-f1f4f2afb8e0
+		summarizeBy: sum
+		sourceColumn: SEPARADO_JUDICIALMENTE
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SOLTEIRO
+		dataType: double
+		lineageTag: b1bfed59-be94-473c-aef5-e1497c9bc963
+		summarizeBy: sum
+		sourceColumn: SOLTEIRO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column VIUVO
+		dataType: double
+		lineageTag: dd50b8b1-beb4-410c-b933-a694902b77d5
+		summarizeBy: sum
+		sourceColumn: VIUVO
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TOTAL_ELEITORES
+		dataType: int64
+		formatString: 0
+		lineageTag: eb06b8d0-0cf6-4f66-b835-2d53cf4cb4b1
+		summarizeBy: sum
+		sourceColumn: TOTAL_ELEITORES
+
+		annotation SummarizationSetBy = Automatic
+
+	partition proporcao_eleitor_secao_2022_PE = m
+		mode: import
+		source =
+				let
+				    Source = Parquet.Document(File.Contents("C:\Users\Pedro\Desktop\CSV_Samples\CENSO_Eleicoes_2022_PE\Parquets\proporcao_secao_2022_PE.parquet"), [Compression=null, LegacyColumnNameEncoding=false, MaxDepth=null]),
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"LOC_KEY", type text}, {"FEMININO", type number}, {"MASCULINO", type number}, {"ANALFABETO", type number}, {"ENSINO_FUNDAMENTAL_COMPLETO", type number}, {"ENSINO_FUNDAMENTAL_INCOMPLETO", type number}, {"ENSINO_MEDIO_COMPLETO", type number}, {"ENSINO_MEDIO_INCOMPLETO", type number}, {"LE_E_ESCREVE", type number}, {"SUPERIOR_COMPLETO", type number}, {"SUPERIOR_INCOMPLETO", type number}, {"100_ANOS_OU_MAIS", Int64.Type}, {"16_ANOS", type number}, {"17_ANOS", type number}, {"18_ANOS", type number}, {"19_ANOS", type number}, {"20_ANOS", type number}, {"21_A_24_ANOS", type number}, {"25_A_29_ANOS", type number}, {"30_A_34_ANOS", type number}, {"35_A_39_ANOS", type number}, {"40_A_44_ANOS", type number}, {"45_A_49_ANOS", type number}, {"50_A_54_ANOS", type number}, {"55_A_59_ANOS", type number}, {"60_A_64_ANOS", type number}, {"65_A_69_ANOS", type number}, {"70_A_74_ANOS", type number}, {"75_A_79_ANOS", type number}, {"80_A_84_ANOS", type number}, {"85_A_89_ANOS", type number}, {"90_A_94_ANOS", type number}, {"95_A_99_ANOS", type number}, {"INVALIDO", type number}, {"CASADO", type number}, {"DIVORCIADO", type number}, {"SEPARADO_JUDICIALMENTE", type number}, {"SOLTEIRO", type number}, {"VIUVO", type number}, {"TOTAL_ELEITORES", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

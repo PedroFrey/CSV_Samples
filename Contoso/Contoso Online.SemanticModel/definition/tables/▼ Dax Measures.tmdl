@@ -1,26 +1,19 @@
 table '▼ Dax Measures'
 	lineageTag: 72ceb723-6ce2-40f1-a28f-3b32bfc86aaf
 
-	measure 'Qty Sales' = COUNTROWS(sales)
+	measure 'Qty Orders' = CALCULATE(COUNTROWS(sales),USERELATIONSHIP(dCalendar[Date],sales[OrderDate]))
 		formatString: 0
 		lineageTag: 1bfca240-1db8-4445-88f2-4912c497f63a
-
-	column Column1
-		dataType: string
-		lineageTag: 04de5aee-7d70-47bd-b6a7-ba2949330c9b
-		summarizeBy: none
-		sourceColumn: Column1
-
-		annotation SummarizationSetBy = Automatic
 
 	partition '▼ Dax Measures' = m
 		mode: import
 		source =
 				let
 				    Source = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Column1 = _t]),
-				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(Source,{{"Column1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Changed Type",{"Column1"})
 				in
-				    #"Changed Type"
+				    #"Colunas Removidas"
 
 	annotation PBI_ResultType = Table
 

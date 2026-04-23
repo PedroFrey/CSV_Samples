@@ -4,27 +4,28 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 39,
+        "x": 0,
         "y": 0
       },
       "nodes": [
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 637,
+            "y": 248
           },
           "nodeIndex": "sales",
           "nodeLineageTag": "f769173a-98a6-455d-b66a-3d9a3874f4ff",
           "size": {
-            "height": 300,
+            "height": 128,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 300
         },
         {
           "location": {
-            "x": 284,
-            "y": 98
+            "x": 0,
+            "y": 0
           },
           "nodeIndex": "▼ Dax Measures",
           "nodeLineageTag": "72ceb723-6ce2-40f1-a28f-3b32bfc86aaf",
@@ -36,15 +37,17 @@
         },
         {
           "location": {
-            "x": 568,
-            "y": 50
+            "x": 360,
+            "y": 0
           },
           "nodeIndex": "dCalendar",
+          "nodeLineageTag": "44c9c2e1-ae55-456c-837a-bf6caf788686",
           "size": {
-            "height": 200,
+            "height": 104,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 0,
+          "expandedHeight": 200
         }
       ],
       "name": "All tables",

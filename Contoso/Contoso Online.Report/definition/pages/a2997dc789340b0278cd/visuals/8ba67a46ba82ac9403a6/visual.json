@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "8ba67a46ba82ac9403a6",
   "position": {
-    "x": 416.58792650918633,
-    "y": 159.5800524934383,
+    "x": 32.195121951219512,
+    "y": 93.658536585365852,
     "z": 1,
-    "height": 112.54593175853017,
-    "width": 223.41207349081364,
+    "height": 112.6829268292683,
+    "width": 223.90243902439025,
     "tabOrder": 1
   },
   "visual": {
@@ -23,11 +23,11 @@
                       "Entity": "▼ Dax Measures"
                     }
                   },
-                  "Property": "Qty Sales"
+                  "Property": "Qty Orders"
                 }
               },
               "queryRef": "▼ Dax Measures.Qty Sales",
-              "nativeQueryRef": "Qty Sales"
+              "nativeQueryRef": "Qty Orders"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "▼ Dax Measures"
                   }
                 },
-                "Property": "Qty Sales"
+                "Property": "Qty Orders"
               }
             },
             "direction": "Descending"
@@ -64,7 +64,7 @@
                 "Entity": "▼ Dax Measures"
               }
             },
-            "Property": "Qty Sales"
+            "Property": "Qty Orders"
           }
         },
         "type": "Advanced"

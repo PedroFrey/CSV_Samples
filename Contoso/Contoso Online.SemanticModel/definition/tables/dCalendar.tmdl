@@ -13,9 +13,9 @@ table dCalendar
 	column Year = YEAR(dCalendar[Date])
 		formatString: 0
 		lineageTag: 897aad6a-e312-4fe3-9511-a65b61bb2af7
-		summarizeBy: sum
+		summarizeBy: none
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	partition dCalendar = calculated
 		mode: import

@@ -1,0 +1,52 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "a83e9c88a567eeda0b70",
+  "position": {
+    "x": 41.111111111111107,
+    "y": 232.22222222222223,
+    "z": 2,
+    "height": 157.77777777777777,
+    "width": 206.66666666666666,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendar"
+                    }
+                  },
+                  "Property": "Year"
+                }
+              },
+              "queryRef": "dCalendar.Year",
+              "nativeQueryRef": "Year"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "▼ Dax Measures"
+                    }
+                  },
+                  "Property": "Qty Orders"
+                }
+              },
+              "queryRef": "▼ Dax Measures.Qty Orders",
+              "nativeQueryRef": "Qty Orders"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

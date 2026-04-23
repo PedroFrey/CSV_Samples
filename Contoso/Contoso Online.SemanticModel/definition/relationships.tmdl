@@ -1,0 +1,10 @@
+relationship 2243de0a-2a85-9d92-ae49-b4320ed726b0
+	isActive: false
+	fromColumn: sales.OrderDate
+	toColumn: dCalendar.Date
+
+relationship ebc05e0d-0130-af9d-0fb9-8329a895593c
+	isActive: false
+	fromColumn: sales.DeliveryDate
+	toColumn: dCalendar.Date
+

@@ -17,6 +17,20 @@ table dCalendar
 
 		annotation SummarizationSetBy = User
 
+	column 'Month N' = MONTH(dCalendar[Date])
+		formatString: 0
+		lineageTag: 68f293dd-2300-4919-8fad-400a9c44ddbd
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Abrev' = FORMAT(dCalendar[Date], "mmm")
+		lineageTag: 86bd01b1-1a83-487e-b765-c5344b0cdbc9
+		summarizeBy: none
+		sortByColumn: 'Month N'
+
+		annotation SummarizationSetBy = Automatic
+
 	partition dCalendar = calculated
 		mode: import
 		source = CALENDARAUTO()

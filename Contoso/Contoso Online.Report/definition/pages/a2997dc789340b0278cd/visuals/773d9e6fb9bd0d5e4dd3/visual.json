@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "a83e9c88a567eeda0b70",
+  "name": "773d9e6fb9bd0d5e4dd3",
   "position": {
-    "x": 11.707317073170731,
-    "y": 206.34146341463415,
-    "z": 2,
-    "height": 193.17073170731706,
-    "width": 264.8780487804878,
-    "tabOrder": 2
+    "x": 276.58536585365852,
+    "y": 115.60975609756098,
+    "z": 3,
+    "height": 244.390243902439,
+    "width": 961.46341463414637,
+    "tabOrder": 3
   },
   "visual": {
-    "visualType": "tableEx",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "dCalendar"
+                    }
+                  },
+                  "Property": "Month Abrev"
+                }
+              },
+              "queryRef": "dCalendar.Month Abrev",
+              "nativeQueryRef": "Month Abrev",
+              "active": true
+            }
+          ]
+        },
+        "Series": {
           "projections": [
             {
               "field": {
@@ -28,7 +47,11 @@
               },
               "queryRef": "dCalendar.Year",
               "nativeQueryRef": "Year"
-            },
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -46,6 +69,21 @@
           ]
         }
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

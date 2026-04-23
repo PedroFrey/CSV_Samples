@@ -1,0 +1,136 @@
+table product
+	lineageTag: 12b05a50-6f42-45cd-b458-0fc28a83dcef
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 8a6cfc78-0e82-41e1-9430-0270c1418eb1
+		summarizeBy: none
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductCode
+		dataType: int64
+		formatString: 0
+		lineageTag: 2ae7b160-918a-4736-92a0-41bc6c63438b
+		summarizeBy: none
+		sourceColumn: ProductCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductName
+		dataType: string
+		lineageTag: 2ef11248-c6bb-40e0-baaa-8153fca260af
+		summarizeBy: none
+		sourceColumn: ProductName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Manufacturer
+		dataType: string
+		lineageTag: 648510ff-30c3-4b30-9089-a97e7e58e9ed
+		summarizeBy: none
+		sourceColumn: Manufacturer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 6b7b748a-e293-4a91-b699-8f17408b476d
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Color
+		dataType: string
+		lineageTag: 277dcb22-18da-40bd-ad24-b3ce222f2ddd
+		summarizeBy: none
+		sourceColumn: Color
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeightUnit
+		dataType: string
+		lineageTag: 03687239-3c98-42a6-80ef-44d2f536109a
+		summarizeBy: none
+		sourceColumn: WeightUnit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weight
+		dataType: int64
+		formatString: 0
+		lineageTag: 14753c13-5eeb-4bcd-9050-472b24a75c2e
+		summarizeBy: none
+		sourceColumn: Weight
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cost
+		dataType: int64
+		formatString: 0
+		lineageTag: 94b8823f-2e33-4f68-a48f-4c78164bb9b5
+		summarizeBy: none
+		sourceColumn: Cost
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: int64
+		formatString: 0
+		lineageTag: cffadbae-da71-4ca6-ab23-0ac0de16a8c9
+		summarizeBy: none
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 2e9eec13-edff-407b-886c-38ceb270e9dd
+		summarizeBy: none
+		sourceColumn: CategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column CategoryName
+		dataType: string
+		lineageTag: d09ade45-47a4-40d9-99c0-40413ba70b40
+		summarizeBy: none
+		sourceColumn: CategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategoryKey
+		dataType: int64
+		formatString: 0
+		lineageTag: ae8fb7a3-8bf6-47a4-a296-cd876610fee2
+		summarizeBy: none
+		sourceColumn: SubCategoryKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column SubCategoryName
+		dataType: string
+		lineageTag: 2cf41a96-54ea-4a5f-94a2-c09d8232d20c
+		summarizeBy: none
+		sourceColumn: SubCategoryName
+
+		annotation SummarizationSetBy = Automatic
+
+	partition product = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PathCsv & "\CSV_Samples\Contoso\product.csv"),[Delimiter=",",  Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProductKey", Int64.Type}, {"ProductCode", Int64.Type}, {"ProductName", type text}, {"Manufacturer", type text}, {"Brand", type text}, {"Color", type text}, {"WeightUnit", type text}, {"Weight", Int64.Type}, {"Cost", Int64.Type}, {"Price", Int64.Type}, {"CategoryKey", Int64.Type}, {"CategoryName", type text}, {"SubCategoryKey", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

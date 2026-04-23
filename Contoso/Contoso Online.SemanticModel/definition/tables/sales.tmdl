@@ -45,7 +45,7 @@ table sales
 		dataType: int64
 		formatString: 0
 		lineageTag: 02d6ed9a-ec60-414f-a1e9-bede91a51a6e
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: CustomerKey
 
 		annotation SummarizationSetBy = Automatic
@@ -54,7 +54,7 @@ table sales
 		dataType: int64
 		formatString: 0
 		lineageTag: 9425d359-0c99-4101-9cb6-8f57497c6e40
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: StoreKey
 
 		annotation SummarizationSetBy = Automatic
@@ -63,7 +63,7 @@ table sales
 		dataType: int64
 		formatString: 0
 		lineageTag: b8e0ac70-52d5-4d27-a5d6-f9054a8966e1
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ProductKey
 
 		annotation SummarizationSetBy = Automatic
@@ -125,7 +125,7 @@ table sales
 		mode: import
 		source =
 				let
-				    Fonte = Csv.Document(File.Contents(PathCsv & "\CSV_Samples\Contoso\sales.csv"),[Delimiter=",", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    Fonte = Csv.Document(File.Contents(PathCsv & "\CSV_Samples\Contoso\sales.csv"),[Delimiter=",",  Encoding=1252, QuoteStyle=QuoteStyle.None]),
 				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
 				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"OrderKey", Int64.Type}, {"LineNumber", Int64.Type}, {"OrderDate", type date}, {"DeliveryDate", type date}, {"CustomerKey", Int64.Type}, {"StoreKey", Int64.Type}, {"ProductKey", Int64.Type}, {"Quantity", Int64.Type}, {"UnitPrice", Int64.Type}, {"NetPrice", Int64.Type}, {"UnitCost", Int64.Type}, {"CurrencyCode", type text}, {"ExchangeRate", Int64.Type}})
 				in
@@ -133,5 +133,5 @@ table sales
 
 	annotation PBI_NavigationStepName = Navegação
 
-	annotation PBI_ResultType = Exception
+	annotation PBI_ResultType = Table
 

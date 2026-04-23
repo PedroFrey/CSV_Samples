@@ -10,5 +10,12 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["sales","PathCsv"]
+
+ref table sales
+ref table DateTableTemplate_e198d397-1e4e-4d3d-bfca-eca99f522080
+ref table LocalDateTable_f59189d4-38b3-49ec-a142-b995c9239406
+ref table LocalDateTable_856ecf7d-c5bc-48f5-b578-5a31b7819d8d
+
 ref cultureInfo pt-BR
 

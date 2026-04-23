@@ -1,0 +1,147 @@
+table sales
+	lineageTag: f769173a-98a6-455d-b66a-3d9a3874f4ff
+
+	column OrderKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 7dc2e85f-276b-48ca-ab64-230f9fa439b8
+		summarizeBy: count
+		sourceColumn: OrderKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column LineNumber
+		dataType: int64
+		formatString: 0
+		lineageTag: 16445e34-1881-470f-b3a1-c27ef6d2b36d
+		summarizeBy: sum
+		sourceColumn: LineNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column OrderDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 13c40533-d244-4638-909c-f38872169587
+		summarizeBy: none
+		sourceColumn: OrderDate
+
+		variation Variation
+			isDefault
+			relationship: eae49637-6ef3-4875-b0c3-c8d71079e656
+			defaultHierarchy: LocalDateTable_f59189d4-38b3-49ec-a142-b995c9239406.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column DeliveryDate
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 48599653-6c76-4fbf-8304-a5a924e78efe
+		summarizeBy: none
+		sourceColumn: DeliveryDate
+
+		variation Variation
+			isDefault
+			relationship: b2f66362-5a8d-4828-b2cb-fec57e36b34b
+			defaultHierarchy: LocalDateTable_856ecf7d-c5bc-48f5-b578-5a31b7819d8d.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column CustomerKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 02d6ed9a-ec60-414f-a1e9-bede91a51a6e
+		summarizeBy: count
+		sourceColumn: CustomerKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column StoreKey
+		dataType: int64
+		formatString: 0
+		lineageTag: 9425d359-0c99-4101-9cb6-8f57497c6e40
+		summarizeBy: count
+		sourceColumn: StoreKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductKey
+		dataType: int64
+		formatString: 0
+		lineageTag: b8e0ac70-52d5-4d27-a5d6-f9054a8966e1
+		summarizeBy: count
+		sourceColumn: ProductKey
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quantity
+		dataType: int64
+		formatString: 0
+		lineageTag: 2340068d-d16a-44de-8598-729523d6d136
+		summarizeBy: sum
+		sourceColumn: Quantity
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitPrice
+		dataType: int64
+		formatString: 0
+		lineageTag: d32452c0-5bae-437b-b240-32f311f55627
+		summarizeBy: sum
+		sourceColumn: UnitPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column NetPrice
+		dataType: int64
+		formatString: 0
+		lineageTag: 1667d880-38b6-49b1-ad8a-eaf9fa8b3ee2
+		summarizeBy: sum
+		sourceColumn: NetPrice
+
+		annotation SummarizationSetBy = Automatic
+
+	column UnitCost
+		dataType: int64
+		formatString: 0
+		lineageTag: aa35b14e-9242-47fd-a63e-07e7217cded3
+		summarizeBy: sum
+		sourceColumn: UnitCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column CurrencyCode
+		dataType: string
+		lineageTag: 4fa911c0-d3ab-4c24-9252-6957a9871153
+		summarizeBy: none
+		sourceColumn: CurrencyCode
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExchangeRate
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e0fd2c5-6190-4c68-aa81-ef516b0d878a
+		summarizeBy: sum
+		sourceColumn: ExchangeRate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition sales = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PathCsv & "\CSV_Samples\Contoso\sales.csv"),[Delimiter=",", Columns=13, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"OrderKey", Int64.Type}, {"LineNumber", Int64.Type}, {"OrderDate", type date}, {"DeliveryDate", type date}, {"CustomerKey", Int64.Type}, {"StoreKey", Int64.Type}, {"ProductKey", Int64.Type}, {"Quantity", Int64.Type}, {"UnitPrice", Int64.Type}, {"NetPrice", Int64.Type}, {"UnitCost", Int64.Type}, {"CurrencyCode", type text}, {"ExchangeRate", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

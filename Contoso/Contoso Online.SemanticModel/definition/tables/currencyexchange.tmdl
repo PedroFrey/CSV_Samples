@@ -1,0 +1,54 @@
+table currencyexchange
+	lineageTag: 8b09f5b3-c105-499b-bfd1-9e98837939ff
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 17306b2c-50c6-4e9f-bef7-7beeeb52cc7f
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column FromCurrency
+		dataType: string
+		lineageTag: 7b97d163-a77b-415b-9a1e-c13223835b7d
+		summarizeBy: none
+		sourceColumn: FromCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+	column ToCurrency
+		dataType: string
+		lineageTag: a1b8395c-b7e1-46ee-81ab-2f5be38b846b
+		summarizeBy: none
+		sourceColumn: ToCurrency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Exchange
+		dataType: int64
+		formatString: 0
+		lineageTag: a7dd3b95-6c1b-4d85-9f04-db65e2e2dfe8
+		summarizeBy: sum
+		sourceColumn: Exchange
+
+		annotation SummarizationSetBy = Automatic
+
+	partition currencyexchange = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents(PathCsv & "\CSV_Samples\Contoso\currencyexchange.csv"),[Delimiter=",",
+				 Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"FromCurrency", type text}, {"ToCurrency", type text}, {"Exchange", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

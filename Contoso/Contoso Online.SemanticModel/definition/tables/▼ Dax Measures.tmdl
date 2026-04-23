@@ -2,7 +2,7 @@ table '▼ Dax Measures'
 	lineageTag: 72ceb723-6ce2-40f1-a28f-3b32bfc86aaf
 
 	measure 'Qty Orders' = CALCULATE(COUNTROWS(sales),USERELATIONSHIP(dCalendar[Date],sales[OrderDate]))
-		formatString: 0
+		formatString: #,0
 		lineageTag: 1bfca240-1db8-4445-88f2-4912c497f63a
 
 	partition '▼ Dax Measures' = m

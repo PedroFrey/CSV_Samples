@@ -8,3 +8,15 @@ relationship ebc05e0d-0130-af9d-0fb9-8329a895593c
 	fromColumn: sales.DeliveryDate
 	toColumn: dCalendar.Date
 
+relationship AutoDetected_61be6ecc-2a46-4f03-be0d-a790abce5677
+	fromColumn: sales.CustomerKey
+	toColumn: customer.CustomerKey
+
+relationship AutoDetected_924d8dbc-31ac-4281-ae51-af0b3dd64e5a
+	fromColumn: sales.StoreKey
+	toColumn: store.StoreKey
+
+relationship AutoDetected_9c7203e9-f925-4ffb-8016-9c792026544f
+	fromColumn: sales.ProductKey
+	toColumn: product.ProductKey
+

@@ -10,9 +10,11 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_ProTooling = ["DevMode"]
 
-annotation PBI_QueryOrder = ["sales","PathCsv"]
+annotation PBI_QueryOrder = ["sales","PathCsv","▼ Dax Measures"]
 
 ref table sales
+ref table '▼ Dax Measures'
+ref table dCalendar
 
 ref cultureInfo pt-BR
 

@@ -1,0 +1,74 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "8ba67a46ba82ac9403a6",
+  "position": {
+    "x": 416.58792650918633,
+    "y": 159.5800524934383,
+    "z": 1,
+    "height": 112.54593175853017,
+    "width": 223.41207349081364,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "cardVisual",
+    "query": {
+      "queryState": {
+        "Data": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "▼ Dax Measures"
+                    }
+                  },
+                  "Property": "Qty Sales"
+                }
+              },
+              "queryRef": "▼ Dax Measures.Qty Sales",
+              "nativeQueryRef": "Qty Sales"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "▼ Dax Measures"
+                  }
+                },
+                "Property": "Qty Sales"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "324f0b31178007378a21",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "▼ Dax Measures"
+              }
+            },
+            "Property": "Qty Sales"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

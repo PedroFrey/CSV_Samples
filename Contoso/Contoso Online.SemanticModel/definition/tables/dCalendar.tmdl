@@ -1,0 +1,25 @@
+table dCalendar
+	lineageTag: 44c9c2e1-ae55-456c-837a-bf6caf788686
+
+	column Date
+		formatString: General Date
+		lineageTag: de755a06-fcd6-4cb0-9617-e51adcc8195f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Year = YEAR(dCalendar[Date])
+		formatString: 0
+		lineageTag: 897aad6a-e312-4fe3-9511-a65b61bb2af7
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCalendar = calculated
+		mode: import
+		source = CALENDARAUTO()
+
+	annotation PBI_Id = e76b1bced08747d5873b8cade0ddc118
+

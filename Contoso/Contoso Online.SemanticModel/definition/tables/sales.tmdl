@@ -26,11 +26,6 @@ table sales
 		summarizeBy: none
 		sourceColumn: OrderDate
 
-		variation Variation
-			isDefault
-			relationship: eae49637-6ef3-4875-b0c3-c8d71079e656
-			defaultHierarchy: LocalDateTable_f59189d4-38b3-49ec-a142-b995c9239406.'Hierarquia de datas'
-
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
@@ -41,11 +36,6 @@ table sales
 		lineageTag: 48599653-6c76-4fbf-8304-a5a924e78efe
 		summarizeBy: none
 		sourceColumn: DeliveryDate
-
-		variation Variation
-			isDefault
-			relationship: b2f66362-5a8d-4828-b2cb-fec57e36b34b
-			defaultHierarchy: LocalDateTable_856ecf7d-c5bc-48f5-b578-5a31b7819d8d.'Hierarquia de datas'
 
 		annotation SummarizationSetBy = Automatic
 
